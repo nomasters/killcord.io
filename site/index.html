@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="nathan toups">
+    <link rel="icon" href="/favicon.ico">
+    <title>killcord</title>
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/custom.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+      <header>
+      	<img src="/assets/killcord-logo.svg"/>
+      	<h1>killcord</h1>
+        <h2>a censorship resistant deadman's switch</h2>
+        <h3>powered by ethereum and ipfs</h3>
+      </header>
+
+      <main role="main" class="inner cover">
+        <p class="lead">Killcord is a tool used to build resilient deadman's switches for releasing encrypted payloads. Leveraging the blockchain and a p2p filesystem, the killcord project owner hides a secret key from the world by <strong>checking in</strong> to the killcord smart contract on ethereum. If the owner stops checking in after a period of time, the killcord is triggered and the secret key that decrypts an encrypted payload is published.
+        </p>
+        <p class="lead">The easiest way to get started with killcord is by <strong>watching</strong> an existing project and decrypting its payload. You'll need to install the <code>killcord</code> <strong>command line tool</strong>. You can download the binary here:
+        </p>
+        <a href="https://killcord.io/killcord/0.0.1-alpha/killcord_0.0.1-alpha_macos_amd64.zip" class="btn btn-lg btn-outline-dark download" target="_">
+        <div>Download for</div> 
+        <h1>Mac</h1>
+        <div>64bit</div>
+        </a>
+        <a href="https://killcord.io/killcord/0.0.1-alpha/killcord_0.0.1-alpha_linux_amd64.zip" class="btn btn-lg btn-outline-dark download" target="_">
+          <div>Download for</div> 
+        <h1>Linux</h1>
+        <div>64bit</div>
+        </a>
+      </br>
+    	<small>There are more installation options listed in the <a href="https://github.com/nomasters/killcord">README</a></small>
+
+      <p class="lead">
+      Unzip the file and move it into your <code>/usr/local/bin/</code> directory
+      </p>
+      <pre>mv killcord /usr/local/bin/killcord</pre>
+      <small>You may need to use <code>sudo</code> or change the ownership of <code>/usr/local/</code> to your user account</small>
+
+    	<p class="lead">
+    	Make a new project directory and change into it:
+    	</p>
+    	<pre>mkdir demo-watcher && cd demo-watcher</pre>
+        <p class="lead">
+    	Its time to setup a watcher project, the hash after the watch command is the address of the killcord smart contract that you'll be watching on ethereum.
+    	</p>
+    	<pre>killcord watch 0x53cacca6fac1499eac058017027769de630ba65e</pre>
+        <p class="lead">
+    	Your project has a copy of the encrypted payload in the <code>payload/encrypted</code> directory. This contract already has a published secret key that's been written to the <code>killcord.toml</code> file in this project. Now you can decrypt the payload by running:
+    	</p>
+    	<pre>killcord decrypt</pre>
+        <p class="lead">
+    	Congratulations. You've successfully decrypted your first killcord payload. You will find the contents in <code>payload/decrypted</code> in the project folder. With just 4 commands, you've installed a new piece of software, created a project folder, started watching a killcord project, and even decrypted the payload. Not too shabby.
+    	</p>
+
+    	<p class="lead">
+    	If you'd like to learn more about killcord, get instructions for testing out your first <code>owner</code> project, or want to give some feedback, 
+    	</p>
+		<a href="https://github.com/nomasters/killcord" class="btn btn-lg btn-primary">Learn more on Github</a>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p><a href="https://nomasters.io/uncopyright/">uncopyrighted</a> by <a href="https://nomasters.io">nomasters</a>.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
