@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	http.Handle("/", http.FileServer(http.Dir("./site")))
+	http.Handle("/", http.FileServer(http.Dir("./dist")))
 	http.ListenAndServe(":3000", nil)
 }

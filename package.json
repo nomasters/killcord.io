@@ -1,0 +1,26 @@
+{
+  "name": "killcord.io",
+  "version": "1.0.0",
+  "description": "landing page for killcord",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomasters/killcord.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nomasters/killcord.io/issues"
+  },
+  "homepage": "https://github.com/nomasters/killcord.io#readme",
+  "devDependencies": {
+    "minify": "3.0.4",
+    "mkdirp": "0.5.1",
+    "ncp": "2.0.0",
+    "purify-css": "1.2.5"
+  }
+}

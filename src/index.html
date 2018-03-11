@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Killcord is a tool used to build resilient deadman's switches for releasing encrypted payloads.">
+    <meta name="keywords" content="deadman's switch, killcord, kill cord, golang, go, ipfs, ethereum, censorship, whistleblower, project, payload, encryption, secrets, contract, encrypted, key, watcher, publisher, owner">
     <meta name="author" content="nathan toups">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
     <title>killcord</title>
-    <link href="/assets/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/custom.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
   </head>
   <body class="text-center">
     <div class="container d-flex h-100 p-3 mx-auto flex-column">
       <header>
-      	<img src="/assets/killcord-logo.svg"/>
+      	<img src="/images/killcord-logo-opt.svg" alt="killcord logo"/>
       	<h1>killcord</h1>
         <h2>a censorship resistant deadman's switch</h2>
-        <h3>powered by ethereum and ipfs</h3>
       </header>
 
       <main role="main" class="inner cover">
-        <p class="lead">Killcord is a tool used to build resilient deadman's switches for releasing encrypted payloads. Leveraging the blockchain and a p2p filesystem, the killcord project owner hides a secret key from the world by <strong>checking in</strong> to the killcord smart contract on ethereum. If the owner stops checking in after a period of time, the killcord is triggered and the secret key that decrypts an encrypted payload is published.
+        <p class="lead">Killcord is a tool used to build resilient deadman's switches for releasing encrypted payloads. In its default configuration, killcord leverages ethereum and ipfs for censorship resistance. The killcord project owner hides a secret key from the world by <strong>checking in</strong> to the killcord smart contract on ethereum. If the owner stops checking in after a period of time, the killcord is triggered and the secret key that decrypts an encrypted payload is published.
         </p>
         <p class="lead">The easiest way to get started with killcord is by <strong>watching</strong> an existing project and decrypting its payload. You'll need to install the <code>killcord</code> <strong>command line tool</strong>. You can download the binary here:
         </p>
